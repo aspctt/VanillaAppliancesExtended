@@ -1,0 +1,69 @@
+Vanilla Appliances Extended
+Build 42 continuation.
+
+This project continues "Vanilla Appliances Extended", Steam Workshop 3155557729,
+which was published without a licence and is no longer updated by its author.
+
+Two different sets of terms apply, because this project cannot grant rights over
+work it did not create.
+
+
+INHERITED WORK
+
+The original mod's artwork, tile definitions and dismantling code remain the
+property of their author. No licence was granted upstream, so none is granted
+here, and nothing in this file claims one. That material is redistributed on the
+same footing it was published on: as a Project Zomboid Workshop mod, with credit,
+and subject to removal on request.
+
+This covers, in whole or in part:
+
+  - the appliances_extended_01 artwork and its texture pack
+  - VanillaAppliancesExtended.tiles
+  - the fridge dismantling context menu and its timed action
+
+NOTICE records what was inherited, what was rewritten, and why.
+
+
+NEW WORK
+
+Everything written for build 42 in this project is offered under the MIT licence
+below. That covers the entity and craft recipe definitions, the tile geometry,
+the JSON translations, and the repository tooling and documentation.
+
+The intent is that whoever inherits this mod next is not left where this fork
+started: with work worth continuing and no permission to continue it.
+
+MIT License
+
+Copyright (c) 2026 aspctt
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+BASE GAME
+
+Project Zomboid is the property of The Indie Stone. This project is an
+unofficial modification, is not affiliated with or endorsed by The Indie Stone,
+and is subject to their terms for user created content.
+
+
+CONTACT
+
+The original author is welcome to have this fork amended or taken down. Contact
+aspctt. Removal requests will be honoured.

@@ -1,0 +1,261 @@
+/* Tile geometry for the appliances_extended_01 sheet.
+
+   B42 uses these boxes for depth sorting. A box that spans the whole tile makes
+   the object claim the square in front of it, so a character standing there
+   sorts behind the sprite and appears to be inside the furniture.
+
+   Vanilla fits each facing to the object's real footprint and insets the front
+   face - see appliances_refrigeration_01 in media/tileGeometry.txt, where the
+   south-facing fridge spans z -4500..2500 rather than the full -4500..4500.
+   The same scheme is used here:
+
+     facing S  inset at +z      facing N  inset at -z
+     facing E  inset at +x      facing W  inset at -x
+
+   Heights are scaled off vanilla: a full-size fridge is ~15500 and a bed is
+   ~7200, so the low chest freezer sits at 8000 and the potbelly stove at 12000.
+
+   Sheet addressing is index = x + (y * 8). Indices 8-11 are blank, so the
+   freezer's W/N facings live at 12-15 (row 1, columns 4-7). */
+
+tileGeometry
+{
+    VERSION = 2,
+
+    tileset
+    {
+        name = appliances_extended_01,
+
+        /* ---- Potbelly stove: single tile, height 12000 ---- */
+
+        /* appliances_extended_01_0 - stove, facing E */
+        tile
+        {
+            xy = 0x0,
+
+            box
+            {
+                translate = 0x0x0,
+                rotate = 0x0x0,
+                min = -4500x0x-4500,
+                max = 2500x12000x4500,
+            }
+
+            properties
+            {
+                Translucent = true,
+            }
+        }
+
+        /* appliances_extended_01_1 - stove, facing S */
+        tile
+        {
+            xy = 1x0,
+
+            box
+            {
+                translate = 0x0x0,
+                rotate = 0x0x0,
+                min = -4500x0x-4500,
+                max = 4500x12000x2500,
+            }
+
+            properties
+            {
+                Translucent = true,
+            }
+        }
+
+        /* appliances_extended_01_2 - stove, facing N */
+        tile
+        {
+            xy = 2x0,
+
+            box
+            {
+                translate = 0x0x0,
+                rotate = 0x0x0,
+                min = -4500x0x-2500,
+                max = 4500x12000x4500,
+            }
+
+            properties
+            {
+                Translucent = true,
+            }
+        }
+
+        /* appliances_extended_01_3 - stove, facing W */
+        tile
+        {
+            xy = 3x0,
+
+            box
+            {
+                translate = 0x0x0,
+                rotate = 0x0x0,
+                min = -2500x0x-4500,
+                max = 4500x12000x4500,
+            }
+
+            properties
+            {
+                Translucent = true,
+            }
+        }
+
+        /* ---- Chest freezer: two tiles per facing, low, height 8000 ---- */
+
+        /* appliances_extended_01_4 - freezer, facing E, grid 0,1 */
+        tile
+        {
+            xy = 4x0,
+
+            box
+            {
+                translate = 0x0x0,
+                rotate = 0x0x0,
+                min = -4500x0x-4500,
+                max = 2500x8000x4500,
+            }
+
+            properties
+            {
+                Translucent = true,
+            }
+        }
+
+        /* appliances_extended_01_5 - freezer, facing E, grid 0,0 */
+        tile
+        {
+            xy = 5x0,
+
+            box
+            {
+                translate = 0x0x0,
+                rotate = 0x0x0,
+                min = -4500x0x-4500,
+                max = 2500x8000x4500,
+            }
+
+            properties
+            {
+                Translucent = true,
+            }
+        }
+
+        /* appliances_extended_01_6 - freezer, facing S, grid 0,0 */
+        tile
+        {
+            xy = 6x0,
+
+            box
+            {
+                translate = 0x0x0,
+                rotate = 0x0x0,
+                min = -4500x0x-4500,
+                max = 4500x8000x2500,
+            }
+
+            properties
+            {
+                Translucent = true,
+            }
+        }
+
+        /* appliances_extended_01_7 - freezer, facing S, grid 1,0 */
+        tile
+        {
+            xy = 7x0,
+
+            box
+            {
+                translate = 0x0x0,
+                rotate = 0x0x0,
+                min = -4500x0x-4500,
+                max = 4500x8000x2500,
+            }
+
+            properties
+            {
+                Translucent = true,
+            }
+        }
+
+        /* appliances_extended_01_12 - freezer, facing W, grid 0,1 */
+        tile
+        {
+            xy = 4x1,
+
+            box
+            {
+                translate = 0x0x0,
+                rotate = 0x0x0,
+                min = -2500x0x-4500,
+                max = 4500x8000x4500,
+            }
+
+            properties
+            {
+                Translucent = true,
+            }
+        }
+
+        /* appliances_extended_01_13 - freezer, facing W, grid 0,0 */
+        tile
+        {
+            xy = 5x1,
+
+            box
+            {
+                translate = 0x0x0,
+                rotate = 0x0x0,
+                min = -2500x0x-4500,
+                max = 4500x8000x4500,
+            }
+
+            properties
+            {
+                Translucent = true,
+            }
+        }
+
+        /* appliances_extended_01_14 - freezer, facing N, grid 0,0 */
+        tile
+        {
+            xy = 6x1,
+
+            box
+            {
+                translate = 0x0x0,
+                rotate = 0x0x0,
+                min = -4500x0x-2500,
+                max = 4500x8000x4500,
+            }
+
+            properties
+            {
+                Translucent = true,
+            }
+        }
+
+        /* appliances_extended_01_15 - freezer, facing N, grid 1,0 */
+        tile
+        {
+            xy = 7x1,
+
+            box
+            {
+                translate = 0x0x0,
+                rotate = 0x0x0,
+                min = -4500x0x-2500,
+                max = 4500x8000x4500,
+            }
+
+            properties
+            {
+                Translucent = true,
+            }
+        }
+    }
+}

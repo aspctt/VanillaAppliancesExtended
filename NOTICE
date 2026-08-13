@@ -1,0 +1,91 @@
+"Project Zomboid" is a trademark of The Indie Stone. This project is in no way
+associated with nor endorsed by The Indie Stone.
+
+Other trademarks and registered trademarks are the property of the respective
+trademark holders.
+
+
+ABOUT THIS PROJECT
+
+Vanilla Appliances Extended adds two craftable appliances, a chest freezer and a
+potbelly stove, both styled and balanced to sit alongside the base game's own.
+
+The original stopped working when build 42 landed and its author is no longer
+updating it. This project continues it against the current build, and drops
+pre-42 support entirely rather than trying to straddle both.
+
+
+UPSTREAM WORK
+
+  Vanilla Appliances Extended
+    Workshop 3155557729
+    Stated terms: none.
+
+    Bundled: the appliances_extended_01 artwork and its texture pack, the tile
+    definitions in VanillaAppliancesExtended.tiles, and the fridge dismantling
+    context menu with its timed action. Artwork cannot be reimplemented from a
+    description, and the tile properties are the author's balance judgement, so
+    these files are the originals.
+
+    The mod ships no licence file and names no author in mod.info, so no
+    copyright line is reproduced here. The Workshop page above identifies the
+    author.
+
+
+REWRITTEN FOR BUILD 42
+
+Build 41 script and Lua conventions did not survive the move to build 42, so the
+following were rebuilt rather than carried over. Each was verified against a
+local build 42 install before being changed.
+
+  Craftable appliances
+    The originals were "item ... Type = Moveable" plus "recipe Make ...".
+    Build 42 ships 969 craftRecipe blocks and no legacy recipe blocks at all, so
+    both appliances were unbuildable. They are now entity definitions with
+    SpriteConfig and CraftRecipe components, following the pattern the base game
+    uses for its own craftable furniture. Ingredients, skill gates and XP awards
+    were carried across unchanged.
+
+  Item declarations
+    "Type = Normal" and "Type = Moveable" became "ItemType = base:normal" and
+    "ItemType = base:moveable". The moveable concept still exists; only the key
+    changed.
+
+  Recipe callbacks
+    The Recipe.OnCreate and Recipe.OnGiveXP namespaces no longer exist in build
+    42, so the server Lua that defined handlers against them raised on load and
+    took the rest of the mod's server code with it. XP is now declared directly
+    on each recipe with xpAward, and the file was removed.
+
+  Guitar dismantling
+    Build 42 consolidated the six coloured electric guitar variants into
+    GuitarElectric and GuitarElectricBass. The recipe referenced item ids that no
+    longer resolve.
+
+  Component salvage
+    A misspelled item id, Base.ElectronicScrap, silently produced nothing. The
+    correct id is Base.ElectronicsScrap.
+
+  Translations
+    Build 42 reads translations as JSON. The mod's Tooltip_EN.txt was never
+    loaded, so its tooltip did not appear. Replaced with Tooltip.json.
+
+  Tile geometry
+    Build 42's renderer needs per-tile geometry for custom tilesheets; without
+    it, appliances render flat or disappear behind walls. tileGeometry.txt was
+    written for this project. The box heights in it are estimated from the sprite
+    art and want a visual pass in game.
+
+
+ASSETS RECOVERED FOR THIS PROJECT
+
+No source artwork survived with the original, only the compiled texture pack.
+photoshop/appliances_extended_01_atlas.png was extracted from that pack so the
+sprites can be edited again. The pixels are the original author's; only the
+container changed.
+
+
+REMOVAL REQUESTS
+
+Any author who wishes their work removed from this project should contact
+aspctt. Removal requests will be honoured.

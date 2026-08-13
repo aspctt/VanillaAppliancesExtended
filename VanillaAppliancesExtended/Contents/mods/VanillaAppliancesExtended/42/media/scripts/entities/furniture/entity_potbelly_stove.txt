@@ -1,0 +1,71 @@
+module Base
+{
+    entity PotBellyStove
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_PotBellyStove,
+            uiEnabled = false,
+        }
+
+        component SpriteConfig
+        {
+            /* Without health the object has none, and a single shove destroys it.
+               Values match vanilla's MetalWelding:5 builds (see entity_welding_stairs). */
+            health = 150,
+            skillBaseHealth = 50,
+
+            /* Single tile. Facings come from VanillaAppliancesExtended.tiles: 0=E 1=S 2=N 3=W */
+            face E
+            {
+                layer
+                {
+                    row = appliances_extended_01_0,
+                }
+            }
+            face S
+            {
+                layer
+                {
+                    row = appliances_extended_01_1,
+                }
+            }
+            face N
+            {
+                layer
+                {
+                    row = appliances_extended_01_2,
+                }
+            }
+            face W
+            {
+                layer
+                {
+                    row = appliances_extended_01_3,
+                }
+            }
+        }
+
+        component CraftRecipe
+        {
+            timedAction = BuildMetalStructureMedium,
+            time = 150,
+            SkillRequired = MetalWelding:5;Mechanics:5,
+            xpAward = MetalWelding:25,
+            category = Furniture,
+            Tags = Welding;Furniture,
+            Tooltip = Tooltip_VAE_PotBellyStove,
+            inputs
+            {
+                item 1 tags[base:weldingmask] mode:keep,
+                item 1 tags[base:screwdriver] mode:keep,
+                item 4 [Base.BlowTorch] flags[DontRecordInput],
+                item 4 [Base.WeldingRods] flags[DontRecordInput],
+                item 18 [Base.SheetMetal],
+                item 6 [Base.MetalPipe],
+                item 12 [Base.Screws],
+            }
+        }
+    }
+}

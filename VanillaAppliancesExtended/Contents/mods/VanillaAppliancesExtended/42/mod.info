@@ -1,0 +1,9 @@
+id=VanillaAppliancesExtended
+name=Vanilla Appliances Extended
+modversion=1.0.0
+description=Adds two craftable appliances styled and balanced for vanilla: a Chest Freezer with two 100-slot frozen compartments, and a Potbelly Stove as an alternative to the wood stove. Dismantle fridges to salvage the refrigeration components they need.
+icon=icon.png
+poster=poster.png
+pack=VanillaAppliancesExtended
+tiledef=VanillaAppliancesExtended 691
+versionMin=42.20

@@ -1,0 +1,21 @@
+module Base
+{
+    xuiSkin default
+    {
+        /* Icons are the south-facing world sprites, extracted from the mod's own
+           texture pack by tools/generate_build_icons.py. */
+        entity ES_ChestFreezer
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = Chest Freezer,
+            Icon = Build_ChestFreezer,
+        }
+
+        entity ES_PotBellyStove
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = Potbelly Stove,
+            Icon = Build_PotBellyStove,
+        }
+    }
+}

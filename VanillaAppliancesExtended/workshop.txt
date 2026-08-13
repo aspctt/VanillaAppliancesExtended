@@ -1,0 +1,7 @@
+version=1
+title=Vanilla Appliances Extended [B42]
+description=Adds two craftable appliances styled and balanced for vanilla: a Chest Freezer with two 100-slot frozen compartments, and a Potbelly Stove as an alternative to the wood stove.
+description=
+description=A build 42 continuation of the original Vanilla Appliances Extended, which is no longer maintained.
+tags=Build 42;Items;Textures;Multiplayer;Balance
+visibility=public

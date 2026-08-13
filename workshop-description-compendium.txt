@@ -1,0 +1,85 @@
+[img]https://i.ibb.co/rK8yVgJz/Steam-Workshop-Description-Seperator.png[/img]
+
+QoL Compendium takes quality of life mods, rebuilds them for build 42, and merges them into one.
+
+They got here different ways. Some were abandoned. Some still work but carry bugs their authors have not got to. Some are freely licensed, and some only lent an idea. All of them are credited below.
+
+Most are not ports. Build 41 code rarely survives the move intact, so where the original broke, guessed at a number, or was made obsolete by the base game, it was rewritten against what build 42 actually does.
+
+[b]Build 42.20 or newer. Singleplayer and multiplayer. Safe to add to an existing save.[/b]
+
+
+[img]https://i.ibb.co/xtVSd8Kn/Steam-Workshop-Contents-Seperator.png[/img]
+
+[b]Rebuilt, and fixed on the way:[/b]
+
+[list]
+    [*][b]XP boosts read as a multiple.[/b] "+75%" is really x4, and Sprinting's first boost is x5. Fitness and Strength stay at x4 however many boosts they get. The original crashes the skills panel on build 42.
+    [*][b]Generator range.[/b] Build 42 made it a sandbox setting. The original still hardcodes it, so it draws the wrong area and is a floor short upwards for everyone.
+    [*][b]Flamingos stay visible.[/b] They are drawn in the floor layer, so furniture behind them or snow on them makes them disappear. Still broken in 42.20.
+    [*][b]Tailoring from cutting clothes.[/b] Vanilla pays nothing for it. Denim and leather now pay per strip, uniforms pay a bonus, and cutting speeds up as the skill rises.
+    [*][b]Skill book icons.[/b] Build 42 draws ten of the twenty four families with the same tinted sprite. All twenty four have their own now.
+    [*][b]Container titles.[/b] No longer run into the weight printed beside them.
+    [*][b]Adrenaline.[/b] Panic sheds fatigue, paid back with interest once you calm down.
+[/list]
+
+[b]Everything else:[/b]
+
+[list]
+    [*][b]Weapon condition[/b] fills the slot with colour as it wears, green through amber to red
+    [*][b]Generator fuel time[/b], whether or not it is running
+    [*][b]Screen overlays[/b] for pain, panic, sickness and temperature
+    [*][b]Fabric type[/b] on clothing tooltips, coloured
+    [*][b]Flag a book as seen[/b] by reading its first page when it is still too advanced
+    [*][b]Hotbar reordering[/b], with a lock once the order suits
+    [*][b]Propane from fuel pumps.[/b] Build 42 has no other way to refill a tank
+    [*][b]Bigger character avatar[/b] in the info panel
+    [*][b]Rifle slings[/b], worn front or back
+    [*][b]Ammo and magazine icons[/b], so five handgun boxes stop sharing one picture
+    [*][b]Perishable food[/b] split from food that keeps, in the inventory categories
+    [*][b]A bigger welding torch[/b], and more welding out of a propane tank
+[/list]
+
+Cosmetic settings live in Mod Options, per player. Anything affecting balance is a sandbox option, so a server sets it for everyone instead of each client running its own numbers.
+
+
+[img]https://i.ibb.co/2wC3Ykd/Steam-Workshop-Compatibility-Seperator.png[/img]
+
+　✓ [url=https://steamcommunity.com:/linkfilter/?url=https://steamcommunity.com/sharedfiles/filedetails/?id=3461263912]Clean HotBar[/url] (weapon condition and hotbar reordering stand down)
+　✓ [url=https://steamcommunity.com:/linkfilter/?url=https://steamcommunity.com/sharedfiles/filedetails/?id=3437629766]Clean UI[/url] (the container title fix stands down)
+　✓ [url=https://steamcommunity.com:/linkfilter/?url=https://steamcommunity.com/sharedfiles/filedetails/?id=3433264162]NeatUI Framework[/url]
+　✓ Any mod that adds skill books, clothing or ammo
+　✖ The individual mods this replaces, listed in the credits
+
+Where another mod already does one of these jobs, this one gets out of the way rather than drawing over it.
+
+
+[img]https://i.ibb.co/d4CjJYgB/Steam-Workshop-Issues-Bugs-Seperator.png[/img]
+
+[list]
+    [*]Restart the game after enabling or updating. Reloading the save is not enough.
+    [*]See if the problem persists with only this mod active.
+    [*]If not, add your other mods back until it happens again.
+    [*]Say which feature, whether you are in singleplayer or multiplayer, and what you did.
+    [*]Post console errors with it. Report on the [url=https://steamcommunity.com:/linkfilter/?url=https://github.com/aspctt/QoLCompendium]GitHub repository[/url] or here.
+    [*]The mod id is [b]QoLCompendium[/b].
+[/list]
+
+
+[img]https://i.ibb.co/Z63wG3cw/Steam-Workshop-Credits-Seperator.png[/img]
+
+Every feature here began as someone else's mod. Search the names above on the Workshop and go thank them.
+
+[olist]
+    [*]Akyet, for the rifle sling models and textures, and Noir for the attachment code
+    [*]falcon33jp, for the ammo and magazine icons
+    [*]Everyone whose mod is rebuilt here, named feature by feature in the mod's NOTICE file
+[/olist]
+
+Art and models cannot be written from a description, so those two are the original files. Everything else is written for this project.
+
+Nothing is included where the author asked that their work not be redistributed. Those features were either written from scratch without reading the original, or left out.
+
+All Rights Reserved. Bundled third party files stay the property of their authors. If you are an author and want your work out of this, contact me and it goes.
+
+"Project Zomboid" is a trademark of The Indie Stone. This project is not associated with nor endorsed by The Indie Stone.

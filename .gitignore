@@ -1,0 +1,53 @@
+###############################################################################
+# Vanilla Appliances Extended - .gitignore for a Project Zomboid mod
+###############################################################################
+
+## Test harness build output
+# The runner is compiled from tests/harness/TestRunner.java on demand.
+tests/build/
+
+## IDE / editor cruft
+.idea/
+.vscode/
+.vs/
+*.iml
+*.code-workspace
+*.swp
+*~
+
+## OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## Logs and crash artefacts, wherever they land
+*.log
+hs_err_pid*.log
+logs/
+
+###############################################################################
+# Local-only reference material. NOT for publication.
+#
+# original-mods/ holds the unpacked source of the upstream mod this project
+# continues, plus two further mods kept only as build 42 reference: a working
+# fridge mod and one of the author's own projects. It is other people's work
+# under other people's terms. Publishing it would redistribute all three.
+#
+# photoshop/ holds source artwork, including the sprite atlas recovered from
+# the upstream texture pack. Those pixels are the original author's; the built
+# texture pack ships inside the mod folder and is the only form that needs to
+# be published.
+#
+# example-script-*.lua are the author's own scripts from an unrelated project,
+# kept as a style reference only.
+#
+# Remove an entry only if you deliberately intend to publish it.
+# See NOTICE and LICENSE.
+###############################################################################
+external-files/
+context-files/
+bug-reports/
+original-mods/
+photoshop/
+example-script-*.lua
+NOTES.md

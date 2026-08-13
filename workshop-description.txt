@@ -1,0 +1,77 @@
+[img]https://i.ibb.co/rK8yVgJz/Steam-Workshop-Description-Seperator.png[/img]
+
+Two craftable appliances, styled and balanced to sit alongside the base game's own. Because they are craftable, they don't need to be placed on a map to be useful.
+
+This is a continuation of the original Vanilla Appliances Extended, which stopped working when build 42 landed and is no longer updated by its author. Build 41 script and Lua conventions did not survive the move, and most of this mod sat on them, so the appliances were rebuilt against what build 42 actually does rather than patched.
+
+Pre-42 support is dropped deliberately rather than straddling both builds.
+
+[b]Build 42.20 or newer. Singleplayer and multiplayer. Safe to add to an existing save.[/b]
+
+
+[img]https://i.ibb.co/xtVSd8Kn/Steam-Workshop-Contents-Seperator.png[/img]
+
+[b]Chest Freezer[/b]
+
+A large freezer in the spirit of the icebox, two tiles wide, with two 100-slot frozen compartments rather than the icebox's 20.
+
+It needs refrigeration components, which are salvaged rather than found. Pick up a fridge, then use the disassemble option on it in your inventory. A screwdriver and Electrical 3 are required.
+
+[b]Potbelly Stove[/b]
+
+A craftable alternative to the wood stove. It wants a lot of metal and welding gear, and it doesn't survive being moved especially well. Good for putting heat in a bedroom before winter does its worst.
+
+[b]Extra dismantling[/b]
+
+Toy cars, loose radio components and electric guitars break down for electronics scrap. The base game already handles TVs, radios and walkie-talkies on its own, so those are left alone.
+
+
+[img]https://i.ibb.co/2wC3Ykd/Steam-Workshop-Compatibility-Seperator.png[/img]
+
+[b]Fixed on the way to build 42:[/b]
+
+[list]
+    [*][b]Both appliances were uncraftable.[/b] Build 42 replaced the old recipe format outright. It ships 969 craftRecipe blocks and no legacy recipe blocks at all.
+    [*][b]The mod's server code raised on load[/b] and took the rest of its server Lua with it, because the namespaces its XP handlers were defined against no longer exist.
+    [*][b]Dismantling a guitar did nothing.[/b] Build 42 consolidated the six coloured electric guitars into two items, so the recipe pointed at ids that no longer resolve.
+    [*][b]Salvaging produced nothing[/b] from a misspelled item id.
+    [*][b]The component tooltip never appeared.[/b] Build 42 reads translations as JSON.
+    [*][b]Shoving an appliance deleted it,[/b] because entity health was never declared.
+    [*][b]The appliances rendered over anything standing beside them,[/b] for want of tile geometry.
+[/list]
+
+　✓ Any mod that adds appliances or furniture
+　✓ Massive Fridge Containers and other cold storage mods
+　✖ The original Vanilla Appliances Extended, which this replaces
+
+[b]Known issue:[/b] you can stand in the far half of the chest freezer. Only the origin tile of a multi-tile object blocks movement in build 42 — a vanilla wood bed does exactly the same thing. Nothing this mod can change fixes it without dropping the freezer to a single tile and losing the two-compartment layout.
+
+
+[img]https://i.ibb.co/d4CjJYgB/Steam-Workshop-Issues-Bugs-Seperator.png[/img]
+
+[list]
+    [*]Restart the game after enabling or updating. Reloading the save is not enough.
+    [*]Furniture health and tile data are set when the object is built, so test on a newly built one.
+    [*]See if the problem persists with only this mod active.
+    [*]If not, add your other mods back until it happens again.
+    [*]Say which appliance, whether you are in singleplayer or multiplayer, and what you did.
+    [*]Post console errors with it. Report on the [url=https://steamcommunity.com:/linkfilter/?url=https://github.com/aspctt/VanillaAppliancesExtended]GitHub repository[/url] or here.
+    [*]The mod id is [b]VanillaAppliancesExtended[/b].
+[/list]
+
+
+[img]https://i.ibb.co/Z63wG3cw/Steam-Workshop-Credits-Seperator.png[/img]
+
+This mod began as someone else's work. The artwork, tile definitions and fridge dismantling code are the original author's and are used here as they were published.
+
+[olist]
+    [*]The author of the original Vanilla Appliances Extended, Workshop 3155557729
+[/olist]
+
+Artwork cannot be rewritten from a description, and the tile properties are the author's balance judgement, so those files are the originals. Everything rebuilt for build 42 is new work, recorded file by file in the mod's NOTICE.
+
+The original was published without a licence, which means the author granted nothing and this continuation rests on the absence of an objection. If you are that author and would rather this not exist, contact me and it goes.
+
+Inherited work stays the property of its author. Everything written for build 42 here is MIT, so whoever picks this up next isn't left where this fork started.
+
+"Project Zomboid" is a trademark of The Indie Stone. This project is not associated with nor endorsed by The Indie Stone.
