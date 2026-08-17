@@ -16,6 +16,10 @@ module Base
             health = 150,
             skillBaseHealth = 50,
 
+            /* Built entities are IsoThumpable, which cannot burn or cook. This
+               swaps in an IsoFireplace, the way the base game's barrel oven does. */
+            OnCreate = VAE_onStoveBuilt,
+
             /* Single tile. Facings come from VanillaAppliancesExtended.tiles: 0=E 1=S 2=N 3=W */
             face E
             {

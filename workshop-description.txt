@@ -23,6 +23,8 @@ If 100 per compartment is too much for your game, it is a sandbox option and can
 
 A craftable alternative to the wood stove. It wants a lot of metal and welding gear, and it doesn't survive being moved especially well. Good for putting heat in a bedroom before winter does its worst.
 
+It burns wood rather than running on power. To fuel it, open the stove and use the Destroy for Fuel button in the loot window, the same as any other fire in build 42. Right clicking the stove itself only offers to light or put it out.
+
 [b]Extra dismantling[/b]
 
 Toy cars, loose radio components and electric guitars break down for electronics scrap. The base game already handles TVs, radios and walkie-talkies on its own, so those are left alone.

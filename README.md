@@ -33,6 +33,10 @@ A craftable alternative to the wood stove. It wants a lot of metal and welding
 gear, and it doesn't survive being moved especially well. Good for putting heat
 in a bedroom before winter does its worst.
 
+It burns wood rather than running on power. Fuel goes in through the "Destroy
+for Fuel" button in the loot window, the same as any other fire in build 42.
+Right clicking the stove only offers to light it or put it out.
+
 **Extra dismantling**
 
 Toy cars, loose radio components and electric guitars can be broken down for
