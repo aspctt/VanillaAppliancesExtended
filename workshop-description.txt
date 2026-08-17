@@ -17,7 +17,7 @@ A large freezer in the spirit of the icebox, two tiles wide, with two 100-slot f
 
 It needs refrigeration components, which are salvaged rather than found. Pick up a fridge, then use the disassemble option on it in your inventory. A screwdriver and Electrical 3 are required.
 
-If 100 per compartment is too much for your game, it is a sandbox option and can go as low as 1. The engine caps world containers at 100, so it cannot go higher. Changes apply on world load, so freezers you have already built pick up the new value.
+If 100 per compartment is too much for your game, it is a sandbox option and can go as low as 1. The engine caps world containers at 100, so it cannot go higher.
 
 [b]Potbelly Stove[/b]
 
@@ -26,6 +26,12 @@ A craftable alternative to the wood stove. It wants a lot of metal and welding g
 [b]Extra dismantling[/b]
 
 Toy cars, loose radio components and electric guitars break down for electronics scrap. The base game already handles TVs, radios and walkie-talkies on its own, so those are left alone.
+
+[b]Options[/b]
+
+Chest freezer capacity per compartment is a sandbox option, from 1 to 100, defaulting to 100. It is a sandbox option rather than a client setting so a server sets it for everyone instead of each player running their own numbers.
+
+New freezers use the value as they are built. Freezers already standing in a save pick it up the next time the world loads, so changing it mid game works.
 
 
 [img]https://i.ibb.co/2wC3Ykd/Steam-Workshop-Compatibility-Seperator.png[/img]
@@ -45,7 +51,7 @@ Toy cars, loose radio components and electric guitars break down for electronics
 　✓ Any mod that adds appliances or furniture
 　✖ The original Vanilla Appliances Extended, which this replaces
 
-[b]Known issue:[/b] you can stand in the far half of the chest freezer. Only the origin tile of a multi-tile object blocks movement in build 42 — a vanilla wood bed does exactly the same thing. Nothing this mod can change fixes it without dropping the freezer to a single tile and losing the two-compartment layout.
+[b]Known issue:[/b] you can stand in the far half of the chest freezer. Only the origin tile of a multi-tile object blocks movement in build 42, and a vanilla wood bed does exactly the same thing. Nothing this mod can change fixes it without dropping the freezer to a single tile and losing the two-compartment layout.
 
 
 [img]https://i.ibb.co/d4CjJYgB/Steam-Workshop-Issues-Bugs-Seperator.png[/img]
