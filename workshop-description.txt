@@ -48,6 +48,9 @@ New freezers use the value as they are built. Freezers already standing in a sav
     [*][b]The component tooltip never appeared.[/b] Build 42 reads translations as JSON.
     [*][b]Shoving an appliance deleted it,[/b] because entity health was never declared.
     [*][b]The appliances rendered over anything standing beside them,[/b] for want of tile geometry.
+    [*][b]The stove could be built but never lit or cooked on.[/b] Build 42 creates built objects as plain structures, which cannot burn whatever the tile declares, so it is swapped for a real fireplace as it is built.
+    [*][b]Nothing usable fit in the stove.[/b] Its container held less than a single log, so there was no way to fuel it.
+    [*][b]The chest freezer opened as four containers instead of two,[/b] from a container type that vanilla chest freezers do not declare.
 [/list]
 
 　✓ Any mod that adds appliances or furniture
