@@ -16,6 +16,10 @@ module Base
             skillBaseHealth = 30,
             canBePadlocked = true,
 
+            /* Applies the FreezerCapacity sandbox option as each tile is built,
+               so a new freezer is correct without needing a reload. */
+            OnCreate = VAE_onFreezerBuilt,
+
             /* Two tiles wide. S/N run along X (one row, two sprites), E/W run
                along Y (two rows). Sprite indices 8-11 are blank in the sheet, so
                the W/N facings live at 12-15 - confirmed against the .pack header. */
