@@ -23,6 +23,10 @@ components, which are salvaged rather than found.
 To get them, pick up a fridge, then use the disassemble option on it in your
 inventory. You'll need a screwdriver and Electrical 3.
 
+Capacity per compartment is a sandbox option, from 1 to 100. The engine caps
+world containers at 100 so it cannot go higher, and the setting is applied on
+world load, so it reaches freezers that already exist.
+
 **Potbelly Stove**
 
 A craftable alternative to the wood stove. It wants a lot of metal and welding

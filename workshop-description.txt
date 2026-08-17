@@ -17,6 +17,8 @@ A large freezer in the spirit of the icebox, two tiles wide, with two 100-slot f
 
 It needs refrigeration components, which are salvaged rather than found. Pick up a fridge, then use the disassemble option on it in your inventory. A screwdriver and Electrical 3 are required.
 
+If 100 per compartment is too much for your game, it is a sandbox option and can go as low as 1. The engine caps world containers at 100, so it cannot go higher. Changes apply on world load, so freezers you have already built pick up the new value.
+
 [b]Potbelly Stove[/b]
 
 A craftable alternative to the wood stove. It wants a lot of metal and welding gear, and it doesn't survive being moved especially well. Good for putting heat in a bedroom before winter does its worst.

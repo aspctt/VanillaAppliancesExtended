@@ -1,0 +1,6 @@
+{
+    "Sandbox_VAE_Storage": "Vanilla Appliances Extended",
+
+    "Sandbox_VanillaAppliancesExtended_FreezerCapacity": "Chest freezer capacity per compartment",
+    "Sandbox_VanillaAppliancesExtended_FreezerCapacity_tooltip": "How much each of the chest freezer's two compartments holds. Default 100, for 200 across the whole unit. The engine caps world containers at 100, so this can only lower it. With the Organized trait the effective capacity is about a third higher again. Applied on world load, so it affects freezers that already exist."
+}

@@ -1,0 +1,17 @@
+VERSION = 1,
+
+/* ========== Storage ========== */
+
+/* Capacity is baked into the tile definitions, so this is applied at runtime by
+   lua/shared/VAE_FreezerCapacity.lua. The engine caps world containers at 100,
+   so this can only lower the freezer, never raise it past 100. */
+
+option VanillaAppliancesExtended.FreezerCapacity
+{
+    type = integer,
+    min = 1,
+    max = 100,
+    default = 100,
+    page = VAE_Storage,
+    translation = VanillaAppliancesExtended_FreezerCapacity,
+}
