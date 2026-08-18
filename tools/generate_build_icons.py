@@ -1,9 +1,13 @@
 """Generate build-menu icons from the mod's own texture pack.
 
-The build menu needs a PNG per entity (xuiSkin `Icon = ...`); without one the
+The build menu needs a texture per entity (xuiSkin `Icon = ...`); without one the
 game draws a placeholder. Rather than hand-draw them, this crops the south
 facing world sprites straight out of VanillaAppliancesExtended.pack, so the
 icons always match what actually gets placed.
+
+Output lands in tools/textures as source art. It is not shipped from there:
+run pack_textures.py afterwards to fold it back into the pack, which is where
+the icons actually reach the game.
 
 The .pack format (little-endian throughout):
 
@@ -19,7 +23,8 @@ The .pack format (little-endian throughout):
         int32 offX, offY     offset within the 128px tile cell
         int32 cellW, cellH
 
-The atlas PNG is appended whole after the header, starting at the PNG magic.
+The atlas PNG follows the sprite table behind an int32 byte length. This only
+reads the first page, so it finds the PNG by its magic instead.
 
 Usage:  python tools/generate_build_icons.py
 """
@@ -32,10 +37,13 @@ from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__))
 MEDIA = os.path.join(
     HERE, "..", "VanillaAppliancesExtended", "Contents", "mods",
-    "VanillaAppliancesExtended", "42", "media",
+    "VanillaAppliancesExtended", "common", "media",
 )
 PACK = os.path.join(MEDIA, "texturepacks", "VanillaAppliancesExtended.pack")
-OUT = os.path.join(MEDIA, "textures")
+OUT = os.path.join(HERE, "textures")
+
+# The pack also holds the finished icons, so only the tilesheet is read here.
+TILESHEET = "appliances_extended_01_"
 
 # Facings come from VanillaAppliancesExtended.tiles. South is the face the
 # camera looks at, so it reads best at icon size.
@@ -66,7 +74,8 @@ def parse_pack(path):
         i += n
         x, y, w, h, ox, oy, _cw, _ch = struct.unpack_from("<8i", d, i)
         i += 32
-        rects[int(name.rsplit("_", 1)[1])] = (x, y, w, h, ox, oy)
+        if name.startswith(TILESHEET):
+            rects[int(name[len(TILESHEET):])] = (x, y, w, h, ox, oy)
 
     png = d.find(b"\x89PNG")
     atlas_bytes = d[png:]

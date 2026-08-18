@@ -3,7 +3,8 @@ module Base
     xuiSkin default
     {
         /* Icons are the south-facing world sprites, extracted from the mod's own
-           texture pack by tools/generate_build_icons.py. */
+           texture pack by tools/generate_build_icons.py and packed back into it
+           by tools/pack_textures.py. These are sprite names, not file paths. */
         entity ES_ChestFreezer
         {
             LuaWindowClass = ISEntityWindow,
