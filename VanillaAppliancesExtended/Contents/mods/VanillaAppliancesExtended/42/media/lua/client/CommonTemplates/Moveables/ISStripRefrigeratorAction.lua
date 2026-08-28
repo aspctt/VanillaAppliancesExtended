@@ -1,3 +1,7 @@
+local function predicateNotBroken(item)
+    return not item:isBroken()
+end
+
 local iceboxAppliance = {}
 
 local minifridgeAppliance = {}
@@ -79,12 +83,16 @@ function ISInventoryMenuElements.VAEContextMovable()
 						toolTip:setName("Disassemble ".._item:getName());
 						toolTip.description = "Recovers components for making refrigeration devices but destroys the object.";
 						
-						if not playerInv:contains("Screwdriver") then
+						-- Five items carry base:screwdriver in build 42, so match the tag
+						-- rather than the one item id, and search bags as vanilla does.
+						if not playerInv:containsTagEvalRecurse(ItemTag.SCREWDRIVER, predicateNotBroken) then
 							toolTip.description = toolTip.description .. " <LINE><RGB:1,0,0>Requires a Screwdriver";
 							option.notAvailable = true;
 						end
-						
-						if self.invMenu.player:getXp():getXP(Perks.Electricity) < 3 then
+
+						-- getXP returns accumulated XP, not the level, so the old check
+						-- passed at 3 XP and never enforced Electrical 3 at all.
+						if self.invMenu.player:getPerkLevel(Perks.Electricity) < 3 then
 							toolTip.description = toolTip.description .. " <LINE><RGB:1,0,0>Requires Electrical 3";
 							option.notAvailable = true;
 						end
