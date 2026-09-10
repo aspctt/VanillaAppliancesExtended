@@ -103,11 +103,13 @@ function ISInventoryMenuElements.VAEContextMovable()
     end
 
     function self.createItem( _p, _item, newItemName )
+		-- The action works on the main inventory, so bring it out of a bag first.
+		ISInventoryPaneContextMenu.transferIfNeeded(_p.player, _item)
 		if minifridgeAppliance[_item:getWorldSprite()] then
-			ISTimedActionQueue.add(ISStripRefrigerator:new(_p.player, _item, newItemName, 1, 1000))
+			ISTimedActionQueue.add(ISStripRefrigerator:new(_p.player, _item, newItemName, 1))
 		else
 			local rand = ZombRand(0, 2) + 1
-			ISTimedActionQueue.add(ISStripRefrigerator:new(_p.player, _item, newItemName, rand, 1000))
+			ISTimedActionQueue.add(ISStripRefrigerator:new(_p.player, _item, newItemName, rand))
 		end
     end
     return self;
