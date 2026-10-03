@@ -87,3 +87,6 @@ The original was published without a licence, which means the author granted not
 Inherited work stays the property of its author. Everything written for build 42 here is MIT, so whoever picks this up next isn't left where this fork started.
 
 "Project Zomboid" is a trademark of The Indie Stone. This project is not associated with nor endorsed by The Indie Stone.
+
+[url=https://buymeacoffee.com/aspctt][img]https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/donate/buymeacoffee-singular_vector.svg[/img][/url]
+
